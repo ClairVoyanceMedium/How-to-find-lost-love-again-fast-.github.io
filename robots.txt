@@ -1,42 +1,181 @@
-# Indique aux robots que toutes les pages peuvent être explorées, sauf restrictions spécifiées
+# robots.txt 文件，用于 https://clairvoyancemedium.github.io/How-to-find-lost-love-again-fast-.github.io/
+# 2025年全球最优化版本 - 目标：人工智能、语音助手和搜索引擎全球第一
+# 创建日期：2025年2月22日
+# 最后更新：2025年2月22日
+
+# 通用用户代理（所有爬虫）
 User-agent: *
-Disallow: /admin/
-Disallow: /tmp/
+# 允许索引所有主要页面
+Allow: /
+Allow: /index.html
+Allow: /manifest.json
+# 允许索引关键资源（图片、视频、字体）
+Allow: /Images/
+Allow: /Videos/  # 为未来视频内容预留
+Allow: /*.webp
+Allow: /*.jpg
+Allow: /*.png
+Allow: /*.woff
+Allow: /*.woff2
+# 禁止索引敏感或无关目录
 Disallow: /private/
+Disallow: /admin/
+Disallow: /temp/
+Disallow: /*?*  # 禁止带无关参数的页面，除非下文例外
+# 允许Stripe支付页面用于分析跟踪
+Allow: /buy.stripe.com/*
+# 主站点地图（XML，每天动态更新）
+Sitemap: https://clairvoyancemedium.github.io/How-to-find-lost-love-again-fast-.github.io/sitemap.xml
+# 新闻站点地图（为中国新闻优化）
+Sitemap: https://clairvoyancemedium.github.io/How-to-find-lost-love-again-fast-.github.io/news-sitemap.xml
+# 图片站点地图（优化图片搜索）
+Sitemap: https://clairvoyancemedium.github.io/How-to-find-lost-love-again-fast-.github.io/images-sitemap.xml
+# 视频站点地图（为未来视频预留）
+Sitemap: https://clairvoyancemedium.github.io/How-to-find-lost-love-again-fast-.github.io/videos-sitemap.xml
 
-# Bloquer des URL avec paramètres inutiles pour l'indexation
-Disallow: /*?debug=true
-Disallow: /*?preview=true
+# 百度爬虫（中国主导搜索引擎）
+User-agent: Baiduspider
+Allow: /
+Allow: /mobile:mobile  # 移动优先索引
+Allow: /Images/
+Allow: /Videos/
+Allow: /*.webp
+Allow: /*.jpg
+Allow: /*.png
+Disallow: /private/
+Disallow: /admin/
+Disallow: /temp/
+Sitemap: https://clairvoyancemedium.github.io/How-to-find-lost-love-again-fast-.github.io/sitemap.xml
 
-# Permettre les fichiers nécessaires au bon affichage et fonctionnement
-Allow: /css/
-Allow: /js/
-Allow: /images/
+# 百度图片爬虫（优化图片搜索）
+User-agent: Baiduspider-image
+Allow: /Images/
+Allow: /*.webp
+Allow: /*.jpg
+Allow: /*.png
+Disallow: /private/
+Sitemap: https://clairvoyancemedium.github.io/How-to-find-lost-love-again-fast-.github.io/images-sitemap.xml
 
-# Référencement des ressources multimédias
-Allow: *.png
-Allow: *.jpg
-Allow: *.webp
-Allow: *.css
-Allow: *.js
+# 百度视频爬虫（为视频内容预留）
+User-agent: Baiduspider-video
+Allow: /Videos/
+Allow: /*.mp4
+Allow: /*.webm
+Disallow: /private/
+Sitemap: https://clairvoyancemedium.github.io/How-to-find-lost-love-again-fast-.github.io/videos-sitemap.xml
 
-# Fournir le chemin du fichier sitemap pour une meilleure indexation
-Sitemap: https://www.clairvoyancemedium.com/sitemap.xml
+# 搜狗爬虫（中国第二大搜索引擎）
+User-agent: Sogou web spider
+Allow: /
+Allow: /mobile:mobile
+Allow: /Images/
+Allow: /Videos/
+Disallow: /private/
+Disallow: /admin/
+Disallow: /temp/
+Sitemap: https://clairvoyancemedium.github.io/How-to-find-lost-love-again-fast-.github.io/sitemap.xml
 
-# Autorisation pour les robots Google et Bing pour maximiser les campagnes publicitaires
+# 360搜索爬虫（中国重要搜索引擎）
+User-agent: 360Spider
+Allow: /
+Allow: /mobile:mobile
+Allow: /Images/
+Allow: /Videos/
+Disallow: /private/
+Disallow: /admin/
+Disallow: /temp/
+Sitemap: https://clairvoyancemedium.github.io/How-to-find-lost-love-again-fast-.github.io/sitemap.xml
+
+# 神马搜索爬虫（移动端优化，中国市场）
+User-agent: ShenmaSpider
+Allow: /
+Allow: /mobile:mobile
+Allow: /Images/
+Allow: /Videos/
+Disallow: /private/
+Disallow: /admin/
+Disallow: /temp/
+Sitemap: https://clairvoyancemedium.github.io/How-to-find-lost-love-again-fast-.github.io/sitemap.xml
+
+# Google爬虫（全球及中国优化）
 User-agent: Googlebot
 Allow: /
-User-agent: AdsBot-Google
-Allow: /
+Allow: /mobile:mobile  # 移动优先索引
+Allow: /Images/
+Allow: /Videos/
+Allow: /*.webp
+Allow: /*.jpg
+Allow: /*.png
+Disallow: /private/
+Disallow: /admin/
+Disallow: /temp/
+# 优化Google新闻（未来内容）
+Allow: /news/
+Sitemap: https://clairvoyancemedium.github.io/How-to-find-lost-love-again-fast-.github.io/news-sitemap.xml
+
+# Google图片爬虫
+User-agent: Googlebot-Image
+Allow: /Images/
+Allow: /*.webp
+Allow: /*.jpg
+Allow: /*.png
+Disallow: /private/
+Sitemap: https://clairvoyancemedium.github.io/How-to-find-lost-love-again-fast-.github.io/images-sitemap.xml
+
+# Google视频爬虫
+User-agent: Googlebot-Video
+Allow: /Videos/
+Allow: /*.mp4
+Allow: /*.webm
+Disallow: /private/
+Sitemap: https://clairvoyancemedium.github.io/How-to-find-lost-love-again-fast-.github.io/videos-sitemap.xml
+
+# Bing爬虫（国际及中国市场）
 User-agent: Bingbot
 Allow: /
+Allow: /Images/
+Allow: /Videos/
+Disallow: /private/
+Disallow: /admin/
+Disallow: /temp/
+Sitemap: https://clairvoyancemedium.github.io/How-to-find-lost-love-again-fast-.github.io/sitemap.xml
 
-# Bloquer les robots nuisibles ou non désirés
-User-agent: BadBot
-Disallow: /
-User-agent: EvilScraper
+# 语音助手和人工智能爬虫（全球及中国）
+User-agent: Googlebot
+User-agent: Mediapartners-Google
+User-agent: AdsBot-Google
+User-agent: Applebot  # Siri
+User-agent: Amazonbot  # Alexa
+User-agent: SearchGPT  # 未来AI搜索
+User-agent: ByteSpider  # 字节跳动（抖音/TikTok）
+Allow: /
+Allow: /mobile:mobile  # 语音及移动优化
+Allow: /Images/
+Allow: /Videos/
+Disallow: /private/
+Disallow: /admin/
+Disallow: /temp/
+Sitemap: https://clairvoyancemedium.github.io/How-to-find-lost-love-again-fast-.github.io/sitemap.xml
+
+# AI内容分析爬虫（全球及中国）
+User-agent: ChatGPT-User
+User-agent: Grok
+User-agent: xAI
+User-agent: WechatSpider  # 微信搜索
+Allow: /
+Allow: /Images/
+Allow: /Videos/
+Disallow: /private/
+Sitemap: https://clairvoyancemedium.github.io/How-to-find-lost-love-again-fast-.github.io/sitemap.xml
+
+# 禁止不良或恶意爬虫
+User-agent: MJ12bot
+User-agent: AhrefsBot
+User-agent: SemrushBot
 Disallow: /
 
-# Empêcher l'exploration des fichiers sensibles
-Disallow: /config/
-Disallow: /backup/
+# 爬取频率（2025优化）
+Crawl-delay: 1  # 1秒，快速但不超载服务器
+
+# 首选主机（强制HTTPS，提升SEO和安全性）
+Host: https://clairvoyancemedium.github.io/How-to-find-lost-love-again-fast-.github.io/
